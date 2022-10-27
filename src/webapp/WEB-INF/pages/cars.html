@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cars</title>
 </head>
 <body>
-<table class="table">
+<table>
     <thead>
     <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Марка</th>
-        <th scope="col">Модель</th>
+        <th>Id</th>
+        <th>Model</th>
+        <th>Series</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="car: ${cars}">
-        <td th:text="${car.getId()}">Id</td>
-        <td th:text="${car.getMarka()}">Марка</td>
-        <td th:text="${car.getModel()}">Модель</td>
+    <tr th:each="car : ${MyCars}">
+        <td th:text="${car.getId()}"></td>
+        <td th:text="${car.getModel()}"></td>
+        <td th:text="${car.getSeries()}"></td>
     </tr>
     </tbody>
 </table>
-
 </body>
 </html>
